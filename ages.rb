@@ -1,3 +1,14 @@
+<<-FEEDBACK
+You are rushing through these assessments, and you need to spend more time making them readable for someone that is not you.
+1. Move each assessment into its own github project
+2. It's great that your are trying out different strategies for solving the problem. Keep your stategies separate from your
+algorithm. Until you have better design skills that means putting them in different files
+3. Name everything better. 'ch' does not imply a strategy. 't' is not a good name for as string anwser.
+4. Use spaces around operators, after a comma etc
+
+Redo this with better conventions!
+FEEDBACK
+
 def getstage
   age = rand(111)
   ch = rand(3) # randomly pick one of the three strategies in this method
