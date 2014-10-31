@@ -1,7 +1,7 @@
 def getstage
   age = rand(111)
-  ch = rand(3)
-  puts "Age is #{age}"
+  ch = rand(3) # randomly pick one of the three strategies in this method
+  #puts "Age is #{age}"
   t = ""
   if ch == 0
     if age<1
@@ -39,7 +39,7 @@ def getstage
     elsif age<100
       t='senior'
     elsif age<110
-      t='super old'
+      t='record breaking'
     end
   else
     a = age
@@ -59,14 +59,16 @@ def getstage
       when (65..100)
         t='senior'
       when (100..110)
-        t='supa dupa old'
-      end
+        t='record breaking'
     end
   end
+  puts "#{age} years old, thus the person is a #{t}"
+end
+
 def arrayage
   age = rand(111)
   agearr = [1,10,12,19,40,65,100,110]
-  txtarr = ["baby","child","tween","teen","adult","middle age","senior","super old"]
+  txtarr = ["baby","child","tween","teen","adult","middle age","senior","record breaking"]
   agearr.each_with_index do |a,idx|
     if age < a
       txt = txtarr[idx]
@@ -75,11 +77,9 @@ def arrayage
     end
   end
 end
-@its = 100
-(0..@its).each do |test|
-  if rand(3) == 0
-    arrayage
-  else
-    getstage
-  end
+
+if rand(3) == 0 # 1/3 chance of picking the one using arrays, otherwise do ifelse
+  arrayage
+else
+  getstage
 end
